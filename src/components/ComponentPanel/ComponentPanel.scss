@@ -1,0 +1,13 @@
+.component-panel {
+  height: 100%;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .el-button {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}

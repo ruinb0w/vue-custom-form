@@ -1,0 +1,26 @@
+.require {
+  color: var(--el-color-danger);
+}
+
+.content-box {
+  box-sizing: border-box;
+}
+
+.content-box .title {
+  width: 7rem;
+  flex-shrink: 0;
+}
+
+.content-box.inline {
+  display: flex;
+  align-items: center;
+}
+
+.context-box.inline .title {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.content-box.inline .input {
+  width: 100%;
+}

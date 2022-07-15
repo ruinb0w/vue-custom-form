@@ -1,0 +1,38 @@
+.component-wrapper {
+  background: #fff;
+  position: relative;
+  user-select: none;
+  padding: 10px;
+  min-height: 40px;
+  .operation-box {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    color: var(--el-color-primary);
+    .item {
+      margin-right: 5px;
+    }
+    .item.icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 5px;
+    }
+  }
+  .content-box {
+    width: 100%;
+    .title {
+      margin-bottom: 10px;
+    }
+  }
+}
+.component-wrapper.custom {
+  margin-bottom: 10px;
+  border: 1px dashed var(--el-border-color);
+  height: 80px;
+  overflow: auto;
+}
+.component-wrapper.custom.active {
+  border-color: var(--el-color-primary);
+}
