@@ -1,11 +1,21 @@
 {
-  "name": "vite-project",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@ruinb0w/vue-custom-form",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/hello-npm.umd.js",
+  "module": "./dist/hello-npm.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/test-btn.es.js",
+      "require": "./dist/test-btn.umd.js"
+    }
   },
   "dependencies": {
     "element-plus": "^2.2.4",
