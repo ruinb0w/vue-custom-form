@@ -1,14 +1,20 @@
 import FormDesign from "./components/FormDesign/FormDesign.vue";
 import FormRender from "./components/FormRender/FormRender.vue";
 
-export { FormDesign, FormRender }; //实现按需引入
+const components = [FormRender, FormDesign];
 
-const components = [FormDesign, FormRender];
-
-const install = function (App, options) {
+const install = function (Vue) {
+  if (install.installed) return;
   components.forEach((component) => {
-    App.component(component.name, component);
+    Vue.component(component.name, component);
   });
 };
+if (typeof window !== "undefined" && window.Vue) {
+  install(window.Vue);
+}
 
-export default { install }; // 实现批量引入
+export { FormDesign, FormRender };
+
+export default {
+  install,
+};

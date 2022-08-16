@@ -1,6 +1,7 @@
 {
   "name": "@ruinb0w/vue-custom-form",
-  "version": "0.0.1",
+  "version": "0.0.4",
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,12 +10,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/hello-npm.umd.js",
-  "module": "./dist/hello-npm.es.js",
+  "main": "./dist/vue-custom-form.umd.js",
+  "module": "./dist/vue-custom-form.es.js",
   "exports": {
     ".": {
-      "import": "./dist/test-btn.es.js",
-      "require": "./dist/test-btn.umd.js"
+      "import": "./dist/vue-custom-form.es.js",
+      "require": "./dist/vue-custom-form.umd.js"
     }
   },
   "dependencies": {

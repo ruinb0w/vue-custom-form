@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,7 +9,7 @@ export default defineConfig({
     // 避免dist被清空
     emptyOutDir: false,
     lib: {
-      entry: "./src/index.js",
+      entry: path.resolve(__dirname, "src/index.js"),
       name: "vue-custom-form",
     },
     rollupOptions: {
