@@ -8,11 +8,7 @@
         @dragenter="dragEnter($event, index)"
         @dragover="dragOver($event)"
       >
-        <f-text
-          :component="item"
-          v-if="item.type == 'text'"
-          @delete="handleDelete(index)"
-        />
+        <f-text :component="item" v-if="item.type == 'text'" @delete="handleDelete(index)" />
         <f-textarea
           :component="item"
           v-if="item.type == 'textarea'"
@@ -23,24 +19,17 @@
           v-if="item.type == 'switcher'"
           @delete="handleDelete(index)"
         />
-        <f-radio
-          :component="item"
-          v-if="item.type == 'radio'"
-          @delete="handleDelete(index)"
-        />
+        <f-radio :component="item" v-if="item.type == 'radio'" @delete="handleDelete(index)" />
         <f-checkbox
           :component="item"
           v-if="item.type == 'checkbox'"
           @delete="handleDelete(index)"
         />
-        <f-select
+        <f-select :component="item" v-if="item.type == 'select'" @delete="handleDelete(index)" />
+        <f-date :component="item" v-if="item.type == 'date'" @delete="handleDelete(index)" />
+        <produce-item
           :component="item"
-          v-if="item.type == 'select'"
-          @delete="handleDelete(index)"
-        />
-        <f-date
-          :component="item"
-          v-if="item.type == 'date'"
+          v-if="item.type == 'produce'"
           @delete="handleDelete(index)"
         />
       </div>
